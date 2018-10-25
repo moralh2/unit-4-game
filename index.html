@@ -9,9 +9,62 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Unit-4-Game</title>
+
+     <!-- Testing styles -->
+    <style>
+      img { 
+        height: 120px;
+        margin: 10px;
+      }
+
+      .border {
+        border-width: 3px !important;
+      }
+    </style>
+
   </head>
   <body>
-    <h1>Unit-4-Game</h1>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="jumbotron mt-3">
+              <h1>Crystal Collector</h1>
+              <p>Hello, traveller. The game is simple. You are given a random number at the start of the game. 
+                Your aim is to match your total score to that random number by clicking on the crystals!
+              </p>
+              <p>
+                There are 4 crystals below. By clicking on one, you add a specific amount of points to your total score.
+                You win the game by matching your total score to the random number; you lose the game if you go above it.
+                The value of each crystal is hidden from you up until you clik on it.
+                Each time the game starts, the values associated with each crystal change.
+              </p>               
+            </div>
+
+            <div class="col-md-12 text-center pt-2">
+                <button type="button" class="btn btn-info">
+                    Random Number <span class="badge badge-light">9</span>
+                </button>
+                <button type="button" class="btn btn-success">
+                    Wins <span class="badge badge-light">9</span>
+                </button>
+                <button type="button" class="btn btn-danger">
+                    Losses <span class="badge badge-light">9</span>
+                </button>
+            </div>
+
+            <div class="col-md-12 text-center total-score mt-5">
+                <h2> Total Score <span class="badge badge-primary">89</span></h2>
+            </div>
+
+            
+            <div class="col-md-12 text-center mt-5">
+                <img class="jewel jewel-random jewel-blue rounded border border-danger" src="assets/images/blue_jewel.png" alt="blue jewel" class="img-thumbnail">  
+                <img class="jewel jewel-random jewel-red rounded border border-primary" src="assets/images/red_jewel.png" alt="blue jewel" class="img-thumbnail">  
+                <img class="jewel jewel-random jewel-purple rounded border border-success" src="assets/images/purple_jewel.png" alt="blue jewel" class="img-thumbnail">  
+                <img class="jewel jewel-random jewel-green rounded border border-warning" src="assets/images/green_jewel.png" alt="blue jewel" class="img-thumbnail">        
+            </div>
+        </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
