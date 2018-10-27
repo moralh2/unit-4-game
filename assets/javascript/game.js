@@ -8,22 +8,36 @@ var j3 = 0
 var j4 = 0
 
 $(document).ready(function() {
-    
     newGame()
-    $(".jewel-blue").click( addScore(j1) );
-    $(".jewel-red").click( addScore(j2) );
-    $(".jewel-purple").click( addScore(j3) );
-    $(".jewel-green").click( addScore(j4) );
+
+    $("#jewel-blue").on("click", function() {
+        addScore(j1)
+    });
+
+    $("#jewel-red").on("click", function() {
+        addScore(j2)
+    });
+
+    $("#jewel-purple").on("click", function() {
+        addScore(j3)
+    });
+
+    $("#jewel-green").on("click", function() {
+        addScore(j4)
+    });
+
 });
 
 function newGame() {
 
     totalScore = 0
-    randomNumber = getRandomNumber(19,120)
-    j1 = getRandomNumber(1,12)
-    j2 = getRandomNumber(1,12)
-    j3 = getRandomNumber(1,12)
-    j4 = getRandomNumber(1,12)
+
+    var min = 19
+    var max = 120
+    randomNumber = Math.floor(Math.random() * (max - min) + min);
+
+    [j1, j2, j3, j4] = getFourRandomNumbers()
+
     updatePageLayout()
 }
 
@@ -48,16 +62,21 @@ function gameOver() {
     }
 }
 
-function getRandomNumber(min, max) {
-    random = Math.floor(Math.random() * (max - min) + min);
-    return random
+function getFourRandomNumbers() {
+    var min = 1
+    var max = 12
+    var arr = []
+    while(arr.length < 4){
+        var randomnumber = Math.floor(Math.random() * (max - min) + min);
+        if(arr.indexOf(randomnumber) > -1) continue;
+        arr[arr.length] = randomnumber;
+    }
+    return arr
 }
 
 function updatePageLayout() {
-    console.log('in page layout')
     $('#total-score').text(totalScore)
     $('#total-wins').text(winScore)
     $('#total-losses').text(loseScore)
     $('#random-number').text(randomNumber)
 }
-
