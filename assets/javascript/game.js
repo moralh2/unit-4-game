@@ -25,11 +25,9 @@ $(document).ready(function() {
     $("#jewel-green").on("click", function() {
         addScore(j4)
     });
-
 });
 
 function newGame() {
-
     totalScore = 0
 
     var min = 19
@@ -42,11 +40,7 @@ function newGame() {
 }
 
 function addScore(value) {
-    console.log("here")
-    console.log(value)
-    console.log(totalScore)
     totalScore += value
-    console.log(totalScore)
     updatePageLayout()
     gameOver()
 }
@@ -80,3 +74,5 @@ function updatePageLayout() {
     $('#total-losses').text(loseScore)
     $('#random-number').text(randomNumber)
 }
+
+//todo: add comments
