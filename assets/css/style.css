@@ -2,10 +2,18 @@ img {
     height: 120px;
     margin: 10px;
 }
-
 .border {
     border-width: 3px !important;
 }
 .attribution {
     font-size: 10px;
+}
+
+.jewel { 
+    box-shadow: 0 9px #999;
+  }
+
+.jewel:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);   
 }
