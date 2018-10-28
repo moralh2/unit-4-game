@@ -1,6 +1,11 @@
 img { 
     height: 120px;
     margin: 10px;
+    box-shadow: 0 9px #999 !important;
+}
+img:active {
+    box-shadow: 0 5px #666 !important;
+    transform: translateY(4px) !important;   
 }
 .border {
     border-width: 3px !important;
@@ -8,16 +13,6 @@ img {
 .attribution {
     font-size: 10px;
 }
-
-.jewel { 
-    box-shadow: 0 9px #999 !important;
-  }
-
-.jewel:active {
-    box-shadow: 0 5px #666 !important;
-    transform: translateY(4px) !important;   
-}
-
-.jumbotron {
+.title {
     padding: 0.5em 0.6em !important;
 }
