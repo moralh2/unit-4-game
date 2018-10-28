@@ -1,0 +1,11 @@
+img { 
+    height: 120px;
+    margin: 10px;
+}
+
+.border {
+    border-width: 3px !important;
+}
+.attribution {
+    font-size: 10px;
+}
